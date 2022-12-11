@@ -1,0 +1,16 @@
+local Player = game.Players.LocalPlayer
+Player.Character.Humanoid.WalkSpeed = 32
+
+while wait() do
+for index, value in next, workspace:GetDescendants() do
+if (value:FindFirstChildOfClass("Humanoid") and value ~= Player.Character) then
+value:WaitForChild("Humanoid").Health -= 9999999
+end
+end
+end
+
+for index, value in next, workspace:GetDescendants() do
+if (value:FindFirstChildOfClass("Humanoid") and value ~= Player.Character) then
+value:WaitForChild("Humanoid").Health -= 9999999
+end
+end
